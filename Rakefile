@@ -11,6 +11,7 @@ begin
     gem.homepage = "http://github.com/DerGuteMoritz/rforce"
     gem.authors = ["Ian Dees", "Logan (henriquez)", "Aaron Qian", "Moritz Heidkamp"]
     gem.add_dependency "builder", ">= 2.0.0"
+    gem.add_dependency 'oauth'
     gem.add_development_dependency "rspec", ">= 1.3"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
