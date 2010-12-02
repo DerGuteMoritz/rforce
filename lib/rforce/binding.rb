@@ -12,7 +12,7 @@ module RForce
   class Binding
     include RForce
 
-    DEFAULT_BATCH_SIZE = 10
+    DEFAULT_BATCH_SIZE = 2000
     attr_accessor :batch_size, :url, :assignment_rule_id, 
                   :use_default_rule, :update_mru, :client_id, 
                   :trigger_user_email,
