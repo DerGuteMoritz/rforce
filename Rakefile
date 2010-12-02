@@ -4,12 +4,12 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "aq1018-rforce"
+    gem.name = "DerGuteMoritz-rforce"
     gem.summary = %Q{A simple, usable binding to the SalesForce API.}
     gem.description = %Q{Rather than enforcing adherence to the sforce.com schema, RForce assumes you are familiar with the API. Ruby method names become SOAP method names. Nested Ruby hashes become nested XML elements.}
-    gem.email = "aq1018@gmail.com"
-    gem.homepage = "http://github.com/aq1018/rforce"
-    gem.authors = ["Ian Dees", "Logan (henriquez)", "Aaron Qian"]
+    gem.email = "moritz@twoticketsplease.de"
+    gem.homepage = "http://github.com/DerGuteMoritz/rforce"
+    gem.authors = ["Ian Dees", "Logan (henriquez)", "Aaron Qian", "Moritz Heidkamp"]
     gem.add_dependency "builder", ">= 2.0.0"
     gem.add_development_dependency "rspec", ">= 1.3"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
