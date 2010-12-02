@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'rforce/method_keys'
 
 module RForce
   class SoapResponseNokogiri
@@ -10,7 +11,7 @@ module RForce
     # Digests an XML DOM node into nested Ruby types.
     def parse
       document = Nokogiri.XML(@content)
-      node = document % 'soapenv:Body'
+      node = document % '//soapenv:Body'
       self.class.node_to_ruby node
     end
 
@@ -27,7 +28,7 @@ module RForce
       end
 
       if children.first.is_a?(Nokogiri::XML::Text)
-        return children.text
+        return children.first.text
       end
 
       # Convert nodes with children into MethodHashes.
@@ -36,13 +37,7 @@ module RForce
       # Add all the element's children to the hash.
       children.each do |e|
         next if e.is_a?(Nokogiri::XML::Text) && e.text.strip.empty?
-        name = e.name
-
-        if name.include? ':'
-          name = name.split(':').last
-        end
-
-        name = name.to_sym
+        name = e.name.to_sym
 
         case elements[name]
           # The most common case: unique child element tags.
