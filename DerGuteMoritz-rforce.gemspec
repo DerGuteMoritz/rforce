@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
     ".hgignore",
     ".hgtags",
     ".specification",
+    "DerGuteMoritz-rforce.gemspec",
     "History.txt",
     "LICENSE",
     "README.rdoc",
