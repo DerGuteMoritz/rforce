@@ -12,7 +12,7 @@ module RForce
     def parse
       @current_value = nil
       @stack = []
-      @parsed = OpenHash.new({})
+      @parsed = MethodHash.new
       @done = false
       @namespaces = []
 
